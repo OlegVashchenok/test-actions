@@ -4,8 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  matrix:
-    job_1:
+  job_1:
       strategy:
         matrix:
           os: [ubuntu-latest, windows-latest]
