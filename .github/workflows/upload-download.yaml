@@ -10,7 +10,7 @@ jobs:
       - name: Math result
         run: expr 2 + 2 > result.txt
       - name: uploud artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: result
           path: result.txt
@@ -19,7 +19,7 @@ jobs:
     needs: job_1
     steps:
       - name: download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: result
       - name: show result
