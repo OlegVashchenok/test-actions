@@ -9,7 +9,7 @@ on:
         default: "21"
       environment:
         description: "environment"
-        required: choice
+        type: choice
         options:
           - "stage"
           - "prod"
