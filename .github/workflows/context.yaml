@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Context Github
-        run: echo '${{ github}}'
+        run: echo '${{ toJson(github)}}'
+      - name: Context job
+        run: echo '${{ toJson(job)}}'
       - name: Context runner
-        run: echo '${{ job}}'
+        run: echo '${{ toJson(runner)}}'
