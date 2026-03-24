@@ -8,9 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: Greeting
+          id: greeting
           uses: ./.github/actions/greeting
           with:
             name: 'Olha'
         - name: print message
-          run: echo ${{ steps.greting.outputs.message }}
+          run: echo ${{ steps.greeting.outputs.message }}
 
