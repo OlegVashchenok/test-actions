@@ -7,6 +7,12 @@ on:
         description: "java version"
         required: true
         default: "21"
+      environment:
+        description: "environment"
+        required: choice
+        options:
+          - "stage"
+          - "prod"
 
 jobs:
   first-job:
