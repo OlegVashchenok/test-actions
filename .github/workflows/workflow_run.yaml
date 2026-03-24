@@ -1,0 +1,13 @@
+name: workflow_run
+
+on:
+  workflow_run:
+    workflows: [first_test_wf.yaml]
+
+jobs:
+  job_1:
+    runs-on: ubuntu-latest
+    steps:
+      run: |
+        pwd
+        ls
