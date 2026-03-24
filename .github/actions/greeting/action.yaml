@@ -1,0 +1,21 @@
+name: Greeting
+description: Greeting a person
+
+inputs:
+  name:
+    description: "name on person"
+    required: true
+  outputs:
+    message:
+      description: "Who get"
+      value: ${{ steps.greet.message }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: "Sey Hello"
+      id: greet
+      shell: bash
+      run: |
+        MSG='HELLO ${{inuts.name}}
+        message=$MSG >> $GITHUB_OUTPUT
