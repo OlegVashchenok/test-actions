@@ -17,5 +17,5 @@ runs:
       id: greet
       shell: bash
       run: |
-        MSG='HELLO ${{inuts.name}}
+        MSG='HELLO ${{inputs.name}}
         message=$MSG >> $GITHUB_OUTPUT
