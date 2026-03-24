@@ -5,17 +5,18 @@ inputs:
   name:
     description: "name on person"
     required: true
-  outputs:
-    message:
-      description: "Who get"
-      value: ${{ steps.greet.message }}
+
+outputs:
+  message:
+    description: "Who get"
+    value: ${{ steps.greet.outputs.message }}
 
 runs:
   using: 'composite'
   steps:
-    - name: "Sey Hello"
+    - name: "Say Hello"
       id: greet
       shell: bash
       run: |
-        MSG='HELLO ${{inputs.name}}
-        message=$MSG >> $GITHUB_OUTPUT
+        MSG="HELLO ${{ inputs.name }}"
+        echo "message=$MSG" >> $GITHUB_OUTPUT
