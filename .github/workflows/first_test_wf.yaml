@@ -7,4 +7,7 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - run: java -version
+      - name: Checkout code
+        run: java -version
+      - name: node versio
+        run: node -v
