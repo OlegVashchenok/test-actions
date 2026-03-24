@@ -1,0 +1,12 @@
+name: context
+
+on:
+  push:
+
+jobs_1:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Context Github
+      run: echo '${{ github}}'
+    - name: Context runner
+      run: echo '${{ job}}'
