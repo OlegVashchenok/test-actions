@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: echo java version
-          run: java -version
+          run:  |
+            java -version
+            exit 1
 
         - name: Runs only in success
           if: ${{ success() }}
