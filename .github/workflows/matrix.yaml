@@ -1,0 +1,15 @@
+name: maxtrix
+
+on:
+  workflow_dispatch:
+
+jobs:
+  matrix:
+    job_1:
+      strategy:
+        matrix:
+          os: [ubuntu-latest, windows-latest]
+          browser: [chrome, firefox]
+      runs-on: ${{ matrix.os }}
+      steps:
+        - name: Run tests on ${{ matrix.os }} with ${{ matrix.browser }}

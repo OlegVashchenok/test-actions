@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: echo java version
+          id: java_version
           run:  |
             java -version
             exit 1
@@ -27,7 +28,6 @@ jobs:
   job_2:
     runs-on: ubuntu-latest
     needs: job_1
-    if: (${{failure()}})
     steps:
         - name: echo java version
           run:  echo "if failed"
