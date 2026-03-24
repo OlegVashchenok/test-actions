@@ -23,3 +23,12 @@ jobs:
         - name: Runs only in success
           if: ${{ always() }}
           run: echo "if failed."
+
+  job_2:
+    runs-on: ubuntu-latest
+    need: job_1
+    if: (${{failure()}})
+    steps:
+        - name: echo java version
+          run:  echo "if failed"
+
